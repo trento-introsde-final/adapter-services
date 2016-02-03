@@ -126,7 +126,12 @@ public class Adapters {
 			String quoteAuthor = o.getString("quoteAuthor");
 			
 			jsonResponse += "\"quote\": \""+quoteText+"\",";
-			jsonResponse += "\"author\": \""+quoteAuthor+"\"";
+			
+			if(quoteAuthor != null && !quoteAuthor.isEmpty()){
+				jsonResponse += "\"author\": \""+quoteAuthor+"\"";
+			} else {
+				jsonResponse += "\"author\": \"Anonymous\"";
+			}
 			
 			jsonResponse += "}}";
 			
