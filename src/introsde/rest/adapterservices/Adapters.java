@@ -24,7 +24,7 @@ public class Adapters {
 	@GET
     @Path("/instagram-pics")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getInstagramPic() throws Exception{
+	public Response getInstagramPics() throws Exception {
 		
 		String[] hashtags = {"happiness", "meditation", "mindfulness", "smile", "travel", "wanderlust"};
 		final String ACCESS_TOKEN = "466302969.5b9e1e6.0e108d1f4c864b348232c4d821643d89";
@@ -68,7 +68,7 @@ public class Adapters {
         			String standard_resolution_url = arr.getJSONObject(i).getJSONObject("images").getJSONObject("standard_resolution").getString("url");
         			String thumbnail = arr.getJSONObject(i).getJSONObject("images").getJSONObject("thumbnail").getString("url");
         			jsonResponse += "\"url\": \""+standard_resolution_url+"\",";
-        			jsonResponse += "\"thumbnail\": \""+thumbnail+"\"";
+        			jsonResponse += "\"thumbUrl\": \""+thumbnail+"\"";
         			
         			if(i == arr.length()-1){
         				jsonResponse += "}";
