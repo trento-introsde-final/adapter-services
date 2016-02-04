@@ -76,8 +76,6 @@ public class Adapters {
         				jsonResponse += "},";
         			}
         		}
-				
-				
 			}
 			
 			jsonResponse += "]}";
@@ -86,7 +84,7 @@ public class Adapters {
 		} else {
 			jsonResponse += "{\"status\": \"ERROR\","
 					+ "\"error\": \"We have encoutered some errors!!\"}";
-			//response.getStatusLine().getReasonPhrase();
+			
 			return Response.ok(jsonResponse).build();
 		}
 		
@@ -142,11 +140,5 @@ public class Adapters {
 					+ "\"error\": \"We have encoutered some errors!!\"}";
 			return Response.ok(jsonResponse).build();
 		}
-	}	
-	
-	
-	
-	
-	
-	
+	}
 }
