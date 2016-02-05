@@ -22,6 +22,13 @@ import org.json.*;
 public class Adapters {
 
 	@GET
+	@Path("/hola")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String hola(){
+		return "Hola";
+	}
+	
+	@GET
     @Path("/instagram-pics")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getInstagramPics() throws Exception {
@@ -83,7 +90,7 @@ public class Adapters {
 			return Response.ok(jsonResponse).build();
 		} else {
 			jsonResponse += "{\"status\": \"ERROR\","
-					+ "\"error\": \"We have encoutered some errors!!\"}";
+					+ "\"error\": \""+response.getStatusLine().getStatusCode() + " " + response.getStatusLine().getReasonPhrase()+"\"}";
 			
 			return Response.ok(jsonResponse).build();
 		}
@@ -137,8 +144,16 @@ public class Adapters {
 			
 		} else {
 			jsonResponse += "{\"status\": \"ERROR\","
-					+ "\"error\": \"We have encoutered some errors!!\"}";
+					+ "\"error\": \""+response.getStatusLine().getStatusCode() + " " + response.getStatusLine().getReasonPhrase()+"\"}";
 			return Response.ok(jsonResponse).build();
 		}
 	}
 }
+
+
+
+
+
+
+
+

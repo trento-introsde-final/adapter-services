@@ -15,7 +15,7 @@
        # The target "download-ivy" and "install-ivy" will download the ivy jar and place it in the "ivy" folder
        # 
 -->
-    <project name="sdelab06" default="compile" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+    <project name="adapter-services" default="compile" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
         <!-- PART 1: Ivy properties, download, installation and configuration -->
         <property name="ivy.install.version" value="2.4.0-rc1" />
         <property name="ivy.jar.dir" value="${basedir}/ivy" />
@@ -83,8 +83,6 @@
             <echo message="${build.dir} has been deleted" />
             <delete dir="${src.dir}/${xjc.package}" />
             <echo message="${src.dir}/${xjc.package} has been deleted" />
-            <delete file="catalog.xml" />
-            <echo message="catalog.xml has been deleted" />
         </target>
         <target name="install" depends="clean, init">
             <echo message="Compile target has been called" />
