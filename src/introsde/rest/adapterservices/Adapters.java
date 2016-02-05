@@ -35,8 +35,12 @@ public class Adapters {
 		
 		String[] hashtags = {"happiness", "meditation", "mindfulness", "smile", "travel", "wanderlust"};
 		final String ACCESS_TOKEN = "466302969.5b9e1e6.0e108d1f4c864b348232c4d821643d89";
+		
 		int random_hashtag = 0 + (int)(Math.random()*(hashtags.length-1)); 
-		String instagram_endpoint = "https://api.instagram.com/v1/tags/"+hashtags[random_hashtag]+"/media/recent?access_token="+ACCESS_TOKEN;
+		String instagram_endpoint = "https://api.instagram.com/v1/tags/"
+				+hashtags[random_hashtag]
+				+"/media/recent?access_token="
+				+ACCESS_TOKEN;
 		
 		String jsonResponse = "";
 		
@@ -63,7 +67,7 @@ public class Adapters {
 			int responseCount = arr.length();
 			jsonResponse += "\"responseCount\": "+responseCount + ",";
 			
-			jsonResponse += "\"result\": [";
+			jsonResponse += "\"results\": [";
 			
 			for (int i = 0; i < arr.length(); i++){
 				
@@ -92,10 +96,8 @@ public class Adapters {
 			jsonResponse += "{\"status\": \"ERROR\","
 					+ "\"error\": \""+response.getStatusLine().getStatusCode() + " " + response.getStatusLine().getReasonPhrase()+"\"}";
 			
-			return Response.ok(jsonResponse).build();
+			return Response.status(404).entity(jsonResponse).build();
 		}
-		
-		//return Response.status(204).build();
 	}
 	
 	@GET
@@ -145,7 +147,7 @@ public class Adapters {
 		} else {
 			jsonResponse += "{\"status\": \"ERROR\","
 					+ "\"error\": \""+response.getStatusLine().getStatusCode() + " " + response.getStatusLine().getReasonPhrase()+"\"}";
-			return Response.ok(jsonResponse).build();
+			return Response.status(404).entity(jsonResponse).build();
 		}
 	}
 }
