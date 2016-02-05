@@ -18,18 +18,18 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.*;
 @Stateless // will work only inside a Java EE application
 @LocalBean // will work only inside a Java EE application
-@Path("/adapterservices")
+@Path("/")
 public class Adapters {
 
 	@GET
-	@Path("/hola")
+	@Path("hola")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String hola(){
 		return "Hola";
 	}
 	
 	@GET
-    @Path("/instagram-pics")
+    @Path("instagram-pics")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getInstagramPics() throws Exception {
 		
@@ -99,7 +99,7 @@ public class Adapters {
 	}
 	
 	@GET
-    @Path("/motivation-quote")
+    @Path("motivation-quote")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getMotivationQuote() throws Exception{
 		
