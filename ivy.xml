@@ -19,7 +19,7 @@
        xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
     <info
         organisation="introsde"
-        module="assigment02"
+        module="adapter-services"
         status="integration">
 	</info>
 	
@@ -34,8 +34,6 @@
         <dependency org="org.glassfish.jersey.core" name="jersey-client" rev="2.11"/>
         <dependency org="org.glassfish.jersey.containers" name="jersey-container-servlet" rev="2.11"/>
         <dependency org="org.glassfish.jersey.containers" name="jersey-container-jetty-http" rev="2.11"/>
-<!--        <dependency org="org.glassfish.jersey.containers" name="jersey-container-grizzly2-http" rev="2.11"/>
-    -->    
         <dependency org="org.glassfish.jersey.containers" name="jersey-container-jdk-http" rev="2.11"/>
             
         <dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.4.2">
@@ -56,10 +54,7 @@
         <dependency org="com.fasterxml.jackson.jaxrs" name="jackson-jaxrs-base" rev="2.4.2">
             <artifact name="jackson-jaxrs-base" type="jar"/>
         </dependency>
-        
-        <dependency org="org.xerial" name="sqlite-jdbc" rev="3.7.2"/>
-        <dependency org="org.mongodb" name="mongo-java-driver" rev="2.12.3"/>
-        <dependency org="com.h2database" name="h2" rev="1.4.181"/>
+
         <dependency org="org.apache.derby" name="derby" rev="10.10.2.0"/>
         <dependency org="javax.ejb" name="javax.ejb-api" rev="3.2"/>
         <dependency org="org.eclipse.persistence" name="javax.persistence" rev="2.1.0"/>
