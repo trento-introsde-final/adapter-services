@@ -33,10 +33,10 @@ public class Adapters {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getInstagramPics() throws Exception {
 		
-		String[] hashtags = {"pioneeradventures", "vacationwolf"};
+		String[] hashtags = {"pioneeradventures", "vacationwolf", "lonelyplanet"};
 		final String ACCESS_TOKEN = "466302969.5b9e1e6.0e108d1f4c864b348232c4d821643d89";
 		
-		int random_hashtag = 0 + (int)(Math.random()*(hashtags.length-1)); 
+		int random_hashtag = 0 + (int)(Math.random()*(hashtags.length-1));
 		String instagram_endpoint = "https://api.instagram.com/v1/tags/"
 				+hashtags[random_hashtag]
 				+"/media/recent?access_token="
