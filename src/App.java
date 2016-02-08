@@ -28,7 +28,6 @@ public class App {
         
         String urlServer = "Server started on " + BASE_URI + "\n[kill the process to exit]";
         
-        ////writer.println(urlServer);
         System.out.println(urlServer);
         
     }

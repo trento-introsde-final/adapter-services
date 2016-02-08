@@ -33,7 +33,7 @@ public class Adapters {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getInstagramPics() throws Exception {
 		
-		String[] hashtags = {"happiness", "meditation", "mindfulness", "smile", "travel", "wanderlust"};
+		String[] hashtags = {"dailyquotes", "outdoors", "meditation", "travel", "wanderlust", "travelgram"};
 		final String ACCESS_TOKEN = "466302969.5b9e1e6.0e108d1f4c864b348232c4d821643d89";
 		
 		int random_hashtag = 0 + (int)(Math.random()*(hashtags.length-1)); 
