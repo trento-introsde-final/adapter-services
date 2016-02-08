@@ -1,5 +1,7 @@
 #FitBot - IntroSDE Final Project - UNITN
 
+##Adapter Services 
+
 Please check the full [project documentation] [2].
 
 Deployed on [https://adapter-services.herokuapp.com/] [1]
